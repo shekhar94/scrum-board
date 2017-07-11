@@ -1,0 +1,19 @@
+<html>
+
+<head></head>
+
+<body>
+    <button onclick="getData('http://localhost:3000/data')"> Click Me</button>
+    <textarea id="update"></textarea>
+    <script>
+        function getData(url) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, false); // false for synchronous request
+            xmlHttp.send(null);
+            document.getElementById("update").innerText = xmlHttp.responseText
+                // return xmlHttp.responseText;
+        }
+    </script>
+</body>
+
+</html>
